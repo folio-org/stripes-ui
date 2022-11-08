@@ -13,5 +13,15 @@
   },
   "peerDependencies": {
     "@folio/stripes-core": "^8.2.0"
+  },
+  "scripts": {
+    "start": "stripes serve",
+    "test": "yarn run test:jest && yarn run test:bigtest ",
+    "test:bigtest": "stripes test karma",
+    "test:jest": "jest --ci --coverage --colors",
+    "lint": "eslint . && stylelint \"src/**/*.css\"",
+    "eslint": "eslint .",
+    "stylelint": "stylelint \"src/**/*.css\"",
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/stripes-ui ./translations/stripes-ui/compiled"
   }
 }
