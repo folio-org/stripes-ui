@@ -14,7 +14,7 @@
   "scripts": {
     "start": "stripes serve",
     "test": "yarn run test:jest",
-    "test:jest": "jest --ci --coverage --colors",
+    "test:jest": "jest --ci --coverage --colors --passWithNoTests",
     "lint": "eslint . && stylelint \"src/**/*.css\"",
     "eslint": "eslint .",
     "stylelint": "stylelint \"src/**/*.css\"",
