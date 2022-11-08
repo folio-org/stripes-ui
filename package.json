@@ -1,0 +1,17 @@
+{
+  "name": "@folio/stripes-ui",
+  "version": "1.0.0",
+  "description": "The main UI wrapper responsible for setting the global layout, navigation menu and top bar",
+  "license": "Apache-2.0",
+  "repository": "folio-org/stripes-ui",
+  "main": "src/index.js",
+  "sideEffects": [
+    "*.css"
+  ],
+  "publishConfig": {
+    "registry": "https://repository.folio.org/repository/npm-folio/"
+  },
+  "peerDependencies": {
+    "@folio/stripes-core": "^8.2.0"
+  }
+}
