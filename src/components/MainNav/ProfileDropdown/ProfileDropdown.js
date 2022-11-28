@@ -16,11 +16,10 @@ import {
   NavListItem,
   NavListSection,
 } from '@folio/stripes-components';
-import { withModules, IntlConsumer } from '@folio/stripes-core';
+import { withModules, IntlConsumer, getEventHandler } from '@folio/stripes-core';
 
 import NavButton from '../NavButton';
 import css from './ProfileDropdown.css';
-import { getEventHandler } from '../../../handlerService';
 import validations from '../../../userDropdownLinksService';
 
 class ProfileDropdown extends Component {

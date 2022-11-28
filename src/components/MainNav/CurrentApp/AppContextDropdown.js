@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
+
 import { Dropdown, DropdownMenu } from '@folio/stripes-components';
+import { withAppCtxMenu } from '@folio/stripes-core';
+
 import CurrentAppButton from './CurrentAppButton';
-import { withAppCtxMenu } from './AppCtxMenuContext';
+
 
 class AppContextDropdown extends React.Component {
   static propTypes = {

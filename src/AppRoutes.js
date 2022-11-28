@@ -3,11 +3,10 @@ import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { connectFor } from '@folio/stripes-connect';
-import { StripesContext, TitleManager, ModuleHierarchyProvider, coreEvents } from '@folio/stripes-core';
+import { StripesContext, TitleManager, ModuleHierarchyProvider, coreEvents, getEventHandlers } from '@folio/stripes-core';
 
 import AddContext from './AddContext';
 import RouteErrorBoundary from './components/RouteErrorBoundary';
-import { getEventHandlers } from './handlerService';
 import { packageName } from './constants';
 
 // Process and cache "app" type modules and render the routes

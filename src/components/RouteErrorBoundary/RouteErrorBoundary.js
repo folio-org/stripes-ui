@@ -7,9 +7,7 @@ import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { ErrorBoundary } from '@folio/stripes-components';
 
-import { coreEvents, ModulesContext, StripesContext } from '@folio/stripes-core';
-
-import { getEventHandlers } from '../../handlerService';
+import { coreEvents, ModulesContext, StripesContext, getEventHandlers } from '@folio/stripes-core';
 
 const RouteErrorBoundary = ({ children, escapeRoute, moduleName, isSettings }) => {
   const intl = useIntl();

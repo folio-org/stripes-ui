@@ -10,7 +10,7 @@ import { CookiesProvider } from 'react-cookie';
 
 import { connectFor } from '@folio/stripes-connect';
 import { Callout, HotKeys } from '@folio/stripes-components';
-import { coreEvents, HandlerManager, TitleManager, StripesContext, CalloutContext } from '@folio/stripes-core';
+import { coreEvents, HandlerManager, TitleManager, StripesContext, CalloutContext, AppCtxMenuProvider } from '@folio/stripes-core';
 
 import ModuleRoutes from './moduleRoutes';
 import {
@@ -29,7 +29,6 @@ import {
   CheckEmailStatusPage,
   ForgotPasswordCtrl,
   ForgotUserNameCtrl,
-  AppCtxMenuProvider,
 } from './components';
 
 class RootWithIntl extends React.Component {

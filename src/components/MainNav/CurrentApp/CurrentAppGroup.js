@@ -5,8 +5,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import { withAppCtxMenu } from '@folio/stripes-core';
+
 import AppContextDropdown from './AppContextDropdown';
-import { withAppCtxMenu } from './AppCtxMenuContext';
 import CurrentApp from './CurrentApp';
 
 const CurrentAppGroup = ({ displayDropdownButton, selectedApp, config }) => {
