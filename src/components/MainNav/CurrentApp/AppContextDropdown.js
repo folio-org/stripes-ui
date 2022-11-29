@@ -34,7 +34,7 @@ class AppContextDropdown extends React.Component {
           <>
             {selectedApp?.displayName}
             <span className="sr-only">
-              <FormattedMessage id="stripes-core.mainnav.appContextMenu" />
+              <FormattedMessage id="stripes-ui.mainnav.appContextMenu" />
             </span>
           </>
         }

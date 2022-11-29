@@ -23,7 +23,7 @@ const SkipLink = () => {
     <NavButton
       icon={<SkipIcon />}
       href="#ModuleContainer"
-      aria-label={intl.formatMessage({ id: 'stripes-core.mainnav.skipMainNavigation' })}
+      aria-label={intl.formatMessage({ id: 'stripes-ui.mainnav.skipMainNavigation' })}
       className={css.skipLink}
     />
   );

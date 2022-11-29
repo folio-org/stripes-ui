@@ -24,7 +24,7 @@ class PasswordHasNotChanged extends Component {
 
   defineErrorCode = () => {
     const { errors } = this.props;
-    const labelNamespace = 'stripes-core.errors';
+    const labelNamespace = 'stripes-ui.errors';
 
     const errorCodes = errors.map((e) => e?.code);
 

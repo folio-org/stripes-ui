@@ -78,7 +78,7 @@ class Login extends Component {
                             tag="h1"
                             data-test-h1
                           >
-                            <FormattedMessage id="stripes-core.title.login" />
+                            <FormattedMessage id="stripes-ui.title.login" />
                           </Headline>
                         </Col>
                       </Row>
@@ -91,7 +91,7 @@ class Login extends Component {
                             >
                               <Col xs={3}>
                                 <FieldLabel htmlFor="input-username">
-                                  <FormattedMessage id="stripes-core.username" />
+                                  <FormattedMessage id="stripes-ui.username" />
                                 </FieldLabel>
                               </Col>
                             </Row>
@@ -125,7 +125,7 @@ class Login extends Component {
                             >
                               <Col xs={3}>
                                 <FieldLabel htmlFor="input-password">
-                                  <FormattedMessage id="stripes-core.password" />
+                                  <FormattedMessage id="stripes-ui.password" />
                                 </FieldLabel>
                               </Col>
                             </Row>
@@ -161,7 +161,7 @@ class Login extends Component {
                               fullWidth
                               marginBottom0
                             >
-                              <FormattedMessage id={`stripes-core.${buttonLabel}`} />
+                              <FormattedMessage id={`stripes-ui.${buttonLabel}`} />
                             </Button>
                           </div>
                         </Col>
@@ -184,7 +184,7 @@ class Login extends Component {
                                 type="button"
                                 buttonStyle="link"
                               >
-                                <FormattedMessage id="stripes-core.button.forgotPassword" />
+                                <FormattedMessage id="stripes-ui.button.forgotPassword" />
                               </Button>
                             </Col>
                             <Col
@@ -199,7 +199,7 @@ class Login extends Component {
                                 type="button"
                                 buttonStyle="link"
                               >
-                                <FormattedMessage id="stripes-core.button.forgotUsername" />
+                                <FormattedMessage id="stripes-ui.button.forgotUsername" />
                               </Button>
                             </Col>
                           </Row>

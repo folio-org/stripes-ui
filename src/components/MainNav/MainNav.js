@@ -176,7 +176,7 @@ class MainNav extends Component {
 
     if (stripes.hasPerm('settings.enabled')) {
       apps.push({
-        displayName: formatMessage({ id: 'stripes-core.settings' }),
+        displayName: formatMessage({ id: 'stripes-ui.settings' }),
         id: 'clickable-settings',
         href: lastVisited.x_settings || '/settings',
         active: pathname.startsWith('/settings'),
@@ -209,7 +209,7 @@ class MainNav extends Component {
                 <SkipLink />
                 <CurrentAppGroup selectedApp={selectedApp} config={stripes.config} />
               </div>
-              <nav aria-label={intl.formatMessage({ id: 'stripes-core.mainnav.topLevelLabel' })} className={css.endSection}>
+              <nav aria-label={intl.formatMessage({ id: 'stripes-ui.mainnav.topLevelLabel' })} className={css.endSection}>
                 <AppList
                   apps={apps}
                   selectedApp={selectedApp}

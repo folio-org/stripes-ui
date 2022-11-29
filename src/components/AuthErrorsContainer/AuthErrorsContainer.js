@@ -16,7 +16,7 @@ const AuthErrorsContainer = ({ errors }) => {
       code,
       type = 'error',
       parameters = [],
-      translationNamespace = 'stripes-core.errors',
+      translationNamespace = 'stripes-ui.errors',
     } = error;
 
     const values = parameters.reduce((res, { key, value }) => ({ ...res, [key]: value }), {});

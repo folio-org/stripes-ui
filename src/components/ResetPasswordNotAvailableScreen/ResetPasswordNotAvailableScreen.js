@@ -21,7 +21,7 @@ const ResetPasswordNotAvailableScreen = () => {
             margin="none"
             className={css.title}
           >
-            <FormattedMessage id="stripes-core.front.error.header" />
+            <FormattedMessage id="stripes-ui.front.error.header" />
           </Headline>
           <Headline
             faded
@@ -29,7 +29,7 @@ const ResetPasswordNotAvailableScreen = () => {
             margin="none"
             className={css.title}
           >
-            <FormattedMessage id="stripes-core.front.error.setPassword.message" />
+            <FormattedMessage id="stripes-ui.front.error.setPassword.message" />
           </Headline>
         </div>
       </Pluggable>

@@ -135,27 +135,27 @@ class Settings extends React.Component {
         <Paneset id="settings-module-display">
           <Pane
             defaultWidth="20%"
-            paneTitle={<FormattedMessage id="stripes-core.settings" />}
+            paneTitle={<FormattedMessage id="stripes-ui.settings" />}
             paneTitleRef={this.paneTitleRef}
             id="settings-nav-pane"
           >
-            <NavList aria-label={formatMessage({ id: 'stripes-core.settings' })}>
+            <NavList aria-label={formatMessage({ id: 'stripes-ui.settings' })}>
               <NavListSection
                 activeLink={activeLink}
-                label={formatMessage({ id: 'stripes-core.settings' })}
+                label={formatMessage({ id: 'stripes-ui.settings' })}
                 className={css.navListSection}
               >
                 {navLinks}
               </NavListSection>
             </NavList>
-            <NavList aria-label={formatMessage({ id: 'stripes-core.settingSystemInfo' })}>
+            <NavList aria-label={formatMessage({ id: 'stripes-ui.settingSystemInfo' })}>
               <NavListSection
-                label={formatMessage({ id: 'stripes-core.settingSystemInfo' })}
+                label={formatMessage({ id: 'stripes-ui.settingSystemInfo' })}
                 activeLink={activeLink}
                 className={css.navListSection}
               >
                 <NavListItem to="/settings/about">
-                  <FormattedMessage id="stripes-core.front.about" />
+                  <FormattedMessage id="stripes-ui.front.about" />
                 </NavListItem>
               </NavListSection>
             </NavList>
@@ -163,7 +163,7 @@ class Settings extends React.Component {
           <Switch>
             {routes}
             <Route path="/settings/about" component={() => <About stripes={stripes} />} key="about" />
-            <Route component={() => <div style={{ padding: '15px' }}><FormattedMessage id="stripes-core.settingChoose" /></div>} />
+            <Route component={() => <div style={{ padding: '15px' }}><FormattedMessage id="stripes-ui.settingChoose" /></div>} />
           </Switch>
         </Paneset>
       </Suspense>

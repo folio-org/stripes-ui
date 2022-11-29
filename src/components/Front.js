@@ -10,7 +10,7 @@ import css from './Front.css';
 import AddContext from '../AddContext';
 
 const Front = ({ stripes }) => {
-  const tag = get(stripes, 'config.welcomeMessage') || 'stripes-core.front.welcome';
+  const tag = get(stripes, 'config.welcomeMessage') || 'stripes-ui.front.welcome';
 
   return (
     <AddContext context={{ stripes }}>

@@ -50,11 +50,11 @@ class CreateResetPassword extends Component {
       passwordMasked: true,
     };
     this.translationNamespaces = {
-      module: 'stripes-core',
+      module: 'stripes-ui',
       smartComponents: 'stripes-smart-components',
-      page: 'stripes-core.createResetPassword',
-      errors: 'stripes-core.errors',
-      button: 'stripes-core.button',
+      page: 'stripes-ui.createResetPassword',
+      errors: 'stripes-ui.errors',
+      button: 'stripes-ui.button',
     };
     this.passwordMatchErrorCode = 'password.match.error';
     this.validators = {

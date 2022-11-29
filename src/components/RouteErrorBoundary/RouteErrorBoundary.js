@@ -18,12 +18,12 @@ const RouteErrorBoundary = ({ children, escapeRoute, moduleName, isSettings }) =
 
   if (moduleName) {
     if (isSettings) {
-      buttonLabelId = 'stripes-core.routeErrorBoundary.goToModuleSettingsHomeLabel';
+      buttonLabelId = 'stripes-ui.routeErrorBoundary.goToModuleSettingsHomeLabel';
     } else {
-      buttonLabelId = 'stripes-core.routeErrorBoundary.goToModuleHomeLabel';
+      buttonLabelId = 'stripes-ui.routeErrorBoundary.goToModuleHomeLabel';
     }
   } else {
-    buttonLabelId = 'stripes-core.routeErrorBoundary.goToAppHomeLabel';
+    buttonLabelId = 'stripes-ui.routeErrorBoundary.goToAppHomeLabel';
   }
 
   const handleReset = () => {
@@ -45,7 +45,7 @@ const RouteErrorBoundary = ({ children, escapeRoute, moduleName, isSettings }) =
 
   return (
     <ErrorBoundary
-      subTitle={intl.formatMessage({ id: 'stripes-core.routeErrorBoundary.sub' })}
+      subTitle={intl.formatMessage({ id: 'stripes-ui.routeErrorBoundary.sub' })}
       resetButtonLabel={intl.formatMessage({ id: buttonLabelId }, { name: moduleName })}
       onReset={handleReset}
       onError={handleError}

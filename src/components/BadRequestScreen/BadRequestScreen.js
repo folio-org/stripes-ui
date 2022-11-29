@@ -21,7 +21,7 @@ const BadRequestScreen = () => {
             margin="none"
             className={css.title}
           >
-            <FormattedMessage id="stripes-core.front.error.header" />
+            <FormattedMessage id="stripes-ui.front.error.header" />
           </Headline>
           <Headline
             faded
@@ -30,7 +30,7 @@ const BadRequestScreen = () => {
             className={css.title}
           >
             <FormattedMessage
-              id="stripes-core.front.error.general.message"
+              id="stripes-ui.front.error.general.message"
               values={{
                 url: window.location.href,
                 br: <br />,

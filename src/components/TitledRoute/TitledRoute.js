@@ -41,7 +41,7 @@ class TitledRoute extends React.Component {
         {...rest}
         render={() => (
           <RouteErrorBoundary escapeRoute="/">
-            <TitleManager page={intl.formatMessage({ id: `stripes-core.title.${name}`, defaultMessage: name })} />
+            <TitleManager page={intl.formatMessage({ id: `stripes-ui.title.${name}`, defaultMessage: name })} />
             {componentWithExtraProps}
           </RouteErrorBoundary>
         )}

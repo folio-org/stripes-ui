@@ -23,7 +23,7 @@ function SSOLogin(props) {
         fullWidth
         onClick={handleSSOLogin}
       >
-        <FormattedMessage id="stripes-core.loginViaSSO" />
+        <FormattedMessage id="stripes-ui.loginViaSSO" />
       </Button>
     </div>
   );

@@ -20,7 +20,7 @@ const NoPermissionScreen = () => {
             tag="h2"
             className={css.title}
           >
-            <FormattedMessage id="stripes-core.front.error.noPermission" />
+            <FormattedMessage id="stripes-ui.front.error.noPermission" />
           </Headline>
         </div>
       </Pluggable>

@@ -13,8 +13,8 @@ import OrganizationLogo from '../../../OrganizationLogo';
 import styles from './PasswordSuccessfullyChanged.css';
 
 const PasswordSuccessfullyChanged = ({ history }) => {
-  const labelNamespace = 'stripes-core.label';
-  const buttonNamespace = 'stripes-core.button';
+  const labelNamespace = 'stripes-ui.label';
+  const buttonNamespace = 'stripes-ui.button';
 
   const handleRedirectClick = () => {
     history.push('/login');

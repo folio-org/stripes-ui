@@ -27,11 +27,11 @@ describe('Profile dropdown', () => {
       userDropdown: [
         {
           route: '/dummy',
-          caption: 'stripes-core.label.okay'
+          caption: 'stripes-ui.label.okay'
         },
         {
           route: '/settings/myprofile/password',
-          caption: 'stripes-core.title.changePassword'
+          caption: 'stripes-ui.title.changePassword'
         },
       ]
     }
