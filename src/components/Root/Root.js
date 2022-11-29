@@ -31,8 +31,6 @@ import SystemSkeleton from '../SystemSkeleton';
 
 import './Root.css';
 
-console.log('Stripes', Stripes);
-
 if (!metadata) {
   // eslint-disable-next-line no-console
   console.error('No metadata harvested from package files, so you will not get app icons. Probably the stripes-core in your Stripes CLI is too old. Try `yarn global upgrade @folio/stripes-cli`');
