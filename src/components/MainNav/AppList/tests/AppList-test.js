@@ -6,7 +6,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { beforeEach, it, describe } from '@bigtest/mocha';
 import { expect } from 'chai';
-import { mountWithContext } from '../../../../../test/bigtest/helpers/render-helpers';
+import { mountWithContext } from '@folio/stripes-core/test/bigtest/helpers/render-helpers';
 
 import AppList from '../AppList';
 import AppListInteractor from './interactor';

@@ -11,6 +11,22 @@
   "publishConfig": {
     "registry": "https://repository.folio.org/repository/npm-folio/"
   },
+  "stripes": {
+    "okapiInterfaces": {
+      "users-bl": "5.0 6.0",
+      "authtoken": "1.0 2.0",
+      "configuration": "2.0"
+    },
+    "optionalOkapiInterfaces": {
+      "login-saml": "2.0"
+    },
+    "permissionSets": [
+      {
+        "permissionName": "settings.enabled",
+        "displayName": "UI: settings area is enabled"
+      }
+    ]
+  },
   "scripts": {
     "start": "stripes serve",
     "clean": "rimraf static",

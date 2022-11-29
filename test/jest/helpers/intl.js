@@ -1,6 +1,6 @@
 import { IntlProvider } from 'react-intl';
 
-import translationsJson from '../../../translations/stripes-core/en';
+import translationsJson from '../../../translations/stripes-ui/en';
 
 const prefixKeys = (translations, prefix) => {
   return Object
@@ -14,7 +14,7 @@ const prefixKeys = (translations, prefix) => {
 };
 
 const translations = {
-  ...prefixKeys(translationsJson, 'stripes-core'),
+  ...prefixKeys(translationsJson, 'stripes-ui'),
 };
 
 const Intl = ({ children }) => (

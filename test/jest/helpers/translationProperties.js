@@ -1,5 +1,5 @@
 import stripesComponentsTranslations from '@folio/stripes-components/translations/stripes-components/en';
-import stripesCoreTranslations from '../../../translations/stripes-core/en';
+import stripesUITranslations from '../../../translations/stripes-ui/en';
 
 const translationsProperties = [
   {
@@ -7,8 +7,8 @@ const translationsProperties = [
     translations: stripesComponentsTranslations,
   },
   {
-    prefix: 'stripes-core',
-    translations: stripesCoreTranslations,
+    prefix: 'stripes-ui',
+    translations: stripesUITranslations,
   }
 ];
 
