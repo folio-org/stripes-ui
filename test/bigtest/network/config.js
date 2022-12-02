@@ -33,6 +33,9 @@ export default function configure() {
     ssoEnabled: false
   });
 
+  this.get('/_/env');
+
+
   this.get('/configurations/entries', {
     configs: []
   });

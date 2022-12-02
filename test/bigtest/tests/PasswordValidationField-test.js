@@ -12,11 +12,10 @@ import TextFieldInteractor from '@folio/stripes-components/lib/TextField/tests/i
 import { when } from '@bigtest/convergence';
 import { Response } from 'miragejs';
 
-import setupApplication from '@folio/stripes-core/test/bigtest/helpers/setup-application-components';
-
-import mount from '@folio/stripes-core/test/bigtest/helpers//mount';
-import connectStripes from '@folio/stripes-core/test/bigtest/helpers//connectStripes';
-import TestForm from '@folio/stripes-core/test/bigtest/helpers//TestForm';
+import mount from '../helpers/mount';
+import connectStripes from '../helpers/connectStripes';
+import TestForm from '../helpers/TestForm';
+import setupApplication from '../helpers/setup-application-components';
 
 import PasswordValidationField from '../../../src/components/CreateResetPassword/components/PasswordValidationField';
 

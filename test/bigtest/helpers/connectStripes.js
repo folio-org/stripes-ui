@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { withStripes } from '../../../src/StripesContext';
+import { withStripes } from '@folio/stripes-core';
 
 export default function connectStripes(component) {
   const propTypes = {

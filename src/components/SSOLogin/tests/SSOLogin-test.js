@@ -3,12 +3,10 @@ import { expect } from 'chai';
 import { beforeEach, it, describe } from '@bigtest/mocha';
 import ButtonInteractor from '@folio/stripes-components/lib/Button/tests/interactor';
 
-import Harness from '@folio/stripes-core/test/bigtest/helpers/Harness';
-import { mount } from '@folio/stripes-core/test/bigtest/helpers/render-helpers';
+import Harness from '../../../../test/bigtest/helpers/Harness';
+import { mount } from '../../../../test/bigtest/helpers/render-helpers';
 import SSOLogin from '..';
 import translations from '../../../../translations/stripes-ui/en';
-
-console.log('translations', translations.loginViaSSO);
 
 // These are SSO component-based tests. There are also route-based tests
 // at /test/bigtest/tests/sso-login-test.js.
@@ -18,7 +16,7 @@ console.log('translations', translations.loginViaSSO);
 // route-based tests and therefore call setupApplication or one of its
 // derivatives). The two types don't play nice together because of they way
 // the do (or don't) clean up their mount points after running.
-describe.only('Login via SSO', () => {
+describe('Login via SSO', () => {
   describe('SSO form presentation', () => {
     const ssoLoginButton = new ButtonInteractor('[data-test-sso-login-button]');
     let clicked = false;

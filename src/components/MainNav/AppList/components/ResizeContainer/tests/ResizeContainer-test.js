@@ -6,7 +6,7 @@ import React from 'react';
 import times from 'lodash/times';
 import { beforeEach, it, describe } from '@bigtest/mocha';
 import { expect } from 'chai';
-import { mount } from '@folio/stripes-core/test/bigtest/helpers/render-helpers';
+import { mount } from '../../../../../../../test/bigtest/helpers/render-helpers';
 
 import ResizeContainer from '../ResizeContainer';
 import ResizeContainerInteractor from './interactor';

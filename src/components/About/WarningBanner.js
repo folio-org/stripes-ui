@@ -9,8 +9,8 @@ import {
   List,
   MessageBanner,
 } from '@folio/stripes-components';
+import { isVersionCompatible } from '@folio/stripes-core';
 
-import { isVersionCompatible } from '../../discoverServices';
 import css from './About.css';
 
 const WarningBanner = ({

@@ -6,9 +6,9 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
 import componentsTranslations from '@folio/stripes-components/translations/stripes-components/en';
-import coreTranslations from '../../../translations/stripes-core/en';
+import coreTranslations from '../../../translations/stripes-ui/en';
 
-
+console.log('coreTranslations', coreTranslations);
 const reducers = {
   form: formReducer,
 };
@@ -40,7 +40,7 @@ function prefixKeys(obj, prefix) {
 class Harness extends React.Component {
   render() {
     const prefixedComponentsTranslations = prefixKeys(componentsTranslations, 'stripes-components');
-    const prefixedCoreTranslations = prefixKeys(coreTranslations, 'stripes-core');
+    const prefixedCoreTranslations = prefixKeys(coreTranslations, 'stripes-ui');
 
     const allTranslations = { ...prefixedComponentsTranslations, ...prefixedCoreTranslations };
 
