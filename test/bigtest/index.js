@@ -9,6 +9,4 @@ requireSrcTest.keys().forEach(requireSrcTest);
 // all subdirectories
 const requireTest = require.context('./tests/', true, /-test/);
 
-console.log(requireTest.keys());
-
 requireTest.keys().forEach(requireTest);

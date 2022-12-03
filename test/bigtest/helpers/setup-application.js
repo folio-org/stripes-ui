@@ -37,8 +37,6 @@ export default function setupApplication({
 } = {}) {
   const mountId = 'testing-root';
 
-  console.log('translations', translations);
-
   beforeEach(async function () {
     // when auth is disabled, add a fake user to the store
     if (disableAuth) {

@@ -2,6 +2,8 @@ import React, { Suspense } from 'react';
 import { useLocation } from 'react-router';
 import PropTypes from 'prop-types';
 
+import { LoadingView } from '@folio/stripes-components';
+
 import { ModulesContext } from '@folio/stripes-core';
 
 import { packageName } from './constants';

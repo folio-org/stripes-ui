@@ -8,7 +8,6 @@ import { createStore, combineReducers } from 'redux';
 import componentsTranslations from '@folio/stripes-components/translations/stripes-components/en';
 import coreTranslations from '../../../translations/stripes-ui/en';
 
-console.log('coreTranslations', coreTranslations);
 const reducers = {
   form: formReducer,
 };
