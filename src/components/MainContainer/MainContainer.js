@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { withLastVisited } from '../LastVisited';
+import { withLastVisited } from '@folio/stripes-core';
 
 import css from './MainContainer.css';
 

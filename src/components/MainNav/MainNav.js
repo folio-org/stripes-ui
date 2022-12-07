@@ -9,9 +9,8 @@ import localforage from 'localforage';
 import { branding } from 'stripes-config';
 
 import { Icon } from '@folio/stripes-components';
-import { withModules } from '@folio/stripes-core';
+import { withModules, LastVisitedContext } from '@folio/stripes-core';
 
-import { LastVisitedContext } from '../LastVisited';
 import { clearOkapiToken, clearCurrentUser } from '../../okapiActions';
 import { resetStore } from '../../mainActions';
 import { getLocale } from '../../loginServices';
