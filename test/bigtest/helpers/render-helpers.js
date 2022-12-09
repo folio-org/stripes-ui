@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { setupAppForTesting } from '@bigtest/react';
 
 import Harness from './Harness';
