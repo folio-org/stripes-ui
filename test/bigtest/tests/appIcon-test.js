@@ -44,7 +44,7 @@ describe('AppIcon', async () => {
     }
   };
 
-  describe.only('Rendering an AppIcon using Stripes-context', () => {
+  describe('Rendering an AppIcon using Stripes-context', () => {
     beforeEach(async () => {
       await mount(
         <AppIcon
