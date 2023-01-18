@@ -19,8 +19,8 @@ jobs:
     env:
       YARN_TEST_OPTIONS: '--karma.singleRun --karma.browsers ChromeDocker --karma.reporters mocha junit --coverage'
       SQ_ROOT_DIR: './src'
-      COMPILE_TRANSLATION_FILES: 'false'
-      PUBLISH_MOD_DESCRIPTOR: 'false'
+      COMPILE_TRANSLATION_FILES: 'true'
+      PUBLISH_MOD_DESCRIPTOR: 'true'
       FOLIO_NPM_REGISTRY: 'https://repository.folio.org/repository/npm-folioci/'
       FOLIO_MD_REGISTRY: 'https://folio-registry.dev.folio.org'
       NODEJS_VERSION: '16'
@@ -177,14 +177,14 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Read module descriptor
-        if: ${{ env.PUBLISH_MOD_DESCRIPTOR == 'true' && (github.ref == 'refs/heads/master' || github.ref  == 'refs/heads/main') }}
+        if: ${{ env.PUBLISH_MOD_DESCRIPTOR == 'true' && github.ref == 'refs/heads/master' || github.ref  == 'refs/heads/main' }}
         id: moduleDescriptor
         uses: juliangruber/read-file-action@v1
         with:
           path: ./module-descriptor.json
 
       - name: Publish module descriptor
-        if: ${{ env.PUBLISH_MOD_DESCRIPTOR == 'true' && (github.ref == 'refs/heads/master' || github.ref  == 'refs/heads/main') }}
+        if: ${{ env.PUBLISH_MOD_DESCRIPTOR == 'true' && github.ref == 'refs/heads/master' || github.ref  == 'refs/heads/main' }}
         id: modDescriptorPost
         uses: fjogeleit/http-request-action@master
         with:

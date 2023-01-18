@@ -1,3 +1,8 @@
-import { init } from '@folio/stripes-core';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import React from 'react';
+import { render } from 'react-dom';
 
-init();
+import App from './App';
+
+render(<App />, document.getElementById('root'));
