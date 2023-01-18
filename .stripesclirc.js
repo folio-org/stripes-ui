@@ -36,7 +36,7 @@ module.exports = {
   hasAllPerms: true,
 
   aliases: {
-    '@folio/stripes-core': '.'
+    '@folio/stripes-ui': '.'
   },
 
   // Custom command extension
