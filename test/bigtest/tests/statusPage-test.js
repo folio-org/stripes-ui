@@ -1,7 +1,7 @@
 import { beforeEach, describe, it } from '@bigtest/mocha';
 import { expect } from 'chai';
 
-import translations from '../../../translations/stripes-core/en';
+import translations from '../../../translations/stripes-ui/en';
 import setupApplication from '../helpers/setup-core-application';
 import StatusPageInteractor from '../interactors/StatusPage';
 

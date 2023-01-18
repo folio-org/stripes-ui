@@ -12,7 +12,7 @@ import ChangePasswordErrorPageInteractor from '../interactors/ChangePasswordErro
 import ChangePasswordConfirmationInteractor from '../interactors/ChangePasswordConfirmation';
 import LoginInteractor from '../interactors/login';
 
-import translations from '../../../translations/stripes-core/en';
+import translations from '../../../translations/stripes-ui/en';
 
 describe('Create/Reset password page', () => {
   const CreateResetPasswordPage = new CreateResetPasswordInteractor('form[class^="form--"]');

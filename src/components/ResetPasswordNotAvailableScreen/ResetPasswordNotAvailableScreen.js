@@ -2,10 +2,9 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import { Headline } from '@folio/stripes-components';
+import { Pluggable, useStripes } from '@folio/stripes-core';
 
 import AddContext from '../../AddContext';
-import Pluggable from '../../Pluggable';
-import { useStripes } from '../../StripesContext';
 
 import css from './ResetPasswordNotAvailableScreen.css';
 
@@ -22,7 +21,7 @@ const ResetPasswordNotAvailableScreen = () => {
             margin="none"
             className={css.title}
           >
-            <FormattedMessage id="stripes-core.front.error.header" />
+            <FormattedMessage id="stripes-ui.front.error.header" />
           </Headline>
           <Headline
             faded
@@ -30,7 +29,7 @@ const ResetPasswordNotAvailableScreen = () => {
             margin="none"
             className={css.title}
           >
-            <FormattedMessage id="stripes-core.front.error.setPassword.message" />
+            <FormattedMessage id="stripes-ui.front.error.setPassword.message" />
           </Headline>
         </div>
       </Pluggable>

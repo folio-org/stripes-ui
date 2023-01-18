@@ -3,10 +3,8 @@
  */
 
 import { interactor, isPresent, find, text, property, attribute } from '@bigtest/interactor';
-import { selectorFromClassnameString } from '../../../../test/bigtest/helpers/render-helpers';
-import css from '../AppIcon.css';
 
-const iconClassSelector = selectorFromClassnameString(`.${css.appIcon}`);
+const iconClassSelector = '[class^="appIcon---"]';
 
 export default interactor(class AppIconInteractor {
   static defaultScope = iconClassSelector;

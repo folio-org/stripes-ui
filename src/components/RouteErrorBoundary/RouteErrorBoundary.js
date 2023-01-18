@@ -6,10 +6,8 @@ import React, { useContext } from 'react';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { ErrorBoundary } from '@folio/stripes-components';
-import events from '../../events';
-import { getEventHandlers } from '../../handlerService';
-import { ModulesContext } from '../../ModulesContext';
-import { StripesContext } from '../../StripesContext';
+
+import { coreEvents, ModulesContext, StripesContext, getEventHandlers } from '@folio/stripes-core';
 
 const RouteErrorBoundary = ({ children, escapeRoute, moduleName, isSettings }) => {
   const intl = useIntl();
@@ -20,12 +18,12 @@ const RouteErrorBoundary = ({ children, escapeRoute, moduleName, isSettings }) =
 
   if (moduleName) {
     if (isSettings) {
-      buttonLabelId = 'stripes-core.routeErrorBoundary.goToModuleSettingsHomeLabel';
+      buttonLabelId = 'stripes-ui.routeErrorBoundary.goToModuleSettingsHomeLabel';
     } else {
-      buttonLabelId = 'stripes-core.routeErrorBoundary.goToModuleHomeLabel';
+      buttonLabelId = 'stripes-ui.routeErrorBoundary.goToModuleHomeLabel';
     }
   } else {
-    buttonLabelId = 'stripes-core.routeErrorBoundary.goToAppHomeLabel';
+    buttonLabelId = 'stripes-ui.routeErrorBoundary.goToAppHomeLabel';
   }
 
   const handleReset = () => {
@@ -39,7 +37,7 @@ const RouteErrorBoundary = ({ children, escapeRoute, moduleName, isSettings }) =
    * listen to events.ERROR.
    */
   const handleError = (error, info) => {
-    const handlers = getEventHandlers(events.ERROR, stripes, modules.handler, {});
+    const handlers = getEventHandlers(coreEvents.ERROR, stripes, modules.handler, {});
     handlers.forEach(handleEvent => {
       handleEvent(error, info);
     });
@@ -47,7 +45,7 @@ const RouteErrorBoundary = ({ children, escapeRoute, moduleName, isSettings }) =
 
   return (
     <ErrorBoundary
-      subTitle={intl.formatMessage({ id: 'stripes-core.routeErrorBoundary.sub' })}
+      subTitle={intl.formatMessage({ id: 'stripes-ui.routeErrorBoundary.sub' })}
       resetButtonLabel={intl.formatMessage({ id: buttonLabelId }, { name: moduleName })}
       onReset={handleReset}
       onError={handleError}

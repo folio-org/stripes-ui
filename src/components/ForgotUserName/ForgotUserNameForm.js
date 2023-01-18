@@ -52,7 +52,7 @@ class ForgotUserNameForm extends Component {
                   tag="h1"
                   data-test-h1
                 >
-                  <FormattedMessage id="stripes-core.label.forgotUsername" />
+                  <FormattedMessage id="stripes-ui.label.forgotUsername" />
                 </Headline>
                 <Headline
                   size="large"
@@ -61,7 +61,7 @@ class ForgotUserNameForm extends Component {
                   faded
                   data-test-p
                 >
-                  <FormattedMessage id="stripes-core.label.forgotUsernameCallToAction" />
+                  <FormattedMessage id="stripes-ui.label.forgotUsernameCallToAction" />
                 </Headline>
                 <div className={formStyles.formGroup}>
                   <Field
@@ -90,7 +90,7 @@ class ForgotUserNameForm extends Component {
                   marginBottom0
                   data-test-submit
                 >
-                  <FormattedMessage id="stripes-core.button.continue" />
+                  <FormattedMessage id="stripes-ui.button.continue" />
                 </Button>
                 <Row center="xs">
                   <Col xs={12}>

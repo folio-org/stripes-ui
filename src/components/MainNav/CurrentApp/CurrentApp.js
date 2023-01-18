@@ -42,7 +42,7 @@ const CurrentApp = ({ config, currentApp, id, intl, badge }) => {
 
   const { displayName, iconData, module, home, route } = actualCurrentApp;
   const href = home || route;
-  const ariaLabel = href ? intl.formatMessage({ id: 'stripes-core.mainnav.currentAppAriaLabel' }, { appName: displayName }) : displayName;
+  const ariaLabel = href ? intl.formatMessage({ id: 'stripes-ui.mainnav.currentAppAriaLabel' }, { appName: displayName }) : displayName;
 
   return (
     <CurrentAppButton

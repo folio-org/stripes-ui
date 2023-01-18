@@ -1,9 +1,6 @@
 import { useQuery } from 'react-query';
 
-import queryLimit from '../queryLimit';
-import useOkapiKy from '../useOkapiKy';
-import { useStripes } from '../StripesContext';
-
+import { queryLimit, useOkapiKy, useStripes } from '@folio/stripes-core';
 
 export const configurationsApi = (module, configName, code) => {
   const params = [];

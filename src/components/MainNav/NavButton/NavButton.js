@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { Badge, Icon } from '@folio/stripes-components';
 
-import AppIcon from '../../AppIcon';
+import { AppIcon } from '@folio/stripes-core';
 
 import css from './NavButton.css';
 

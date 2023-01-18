@@ -4,12 +4,11 @@ import {
 } from 'react-query';
 import { renderHook } from '@testing-library/react-hooks';
 
-import useOkapiEnv from './useOkapiEnv';
-import { useStripes } from '../StripesContext';
-import useOkapiKy from '../useOkapiKy';
+import { useOkapiKy, useStripes } from '@folio/stripes-core';
 
-jest.mock('../useOkapiKy');
-jest.mock('../StripesContext');
+import useOkapiEnv from './useOkapiEnv';
+
+jest.mock('@folio/stripes-core');
 
 // set query retries to false. otherwise, react-query will thoughtfully
 // (but unhelpfully, in the context of testing) retry a failed query

@@ -1,26 +1,15 @@
 {
-  "name": "@folio/stripes-core",
-  "version": "9.0.0",
-  "description": "The starting point for Stripes applications",
+  "name": "@folio/stripes-ui",
+  "version": "1.0.0",
+  "description": "The main UI wrapper responsible for setting the global layout, navigation menu and top bar",
   "license": "Apache-2.0",
-  "repository": "folio-org/stripes-core",
+  "repository": "folio-org/stripes-ui",
+  "main": "src/index.js",
   "sideEffects": [
     "*.css"
   ],
   "publishConfig": {
     "registry": "https://repository.folio.org/repository/npm-folio/"
-  },
-  "scripts": {
-    "start": "stripes serve",
-    "clean": "rimraf static",
-    "test": "yarn run test:jest && yarn run test:bigtest ",
-    "test:bigtest": "stripes test karma",
-    "test:jest": "jest --ci --coverage --colors",
-    "lint": "eslint . && stylelint \"src/**/*.css\"",
-    "eslint": "eslint .",
-    "stylelint": "stylelint \"src/**/*.css\"",
-    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/stripes-core ./translations/stripes-core/compiled",
-    "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json"
   },
   "stripes": {
     "okapiInterfaces": {
@@ -38,6 +27,34 @@
       }
     ]
   },
+  "scripts": {
+    "start": "stripes serve",
+    "clean": "rimraf static",
+    "test": "yarn run test:jest && yarn run test:bigtest",
+    "test:bigtest": "stripes test karma",
+    "test:jest": "jest --ci --coverage --colors",
+    "lint": "eslint . && stylelint \"src/**/*.css\"",
+    "eslint": "eslint .",
+    "stylelint": "stylelint \"src/**/*.css\"",
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/stripes-ui ./translations/stripes-ui/compiled",
+    "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json"
+  },
+  "peerDependencies": {
+    "@folio/stripes-core": "^8.2.0",
+    "@folio/stripes-components": "^10.0.0",
+    "@folio/stripes-connect": "^7.0.0",
+    "@folio/stripes-logger": "^1.0.0",
+    "moment": "^2.29.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-intl": "^5.7.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux-observable": "^1.2.0",
+    "prop-types": "^15.5.10",
+    "rxjs": "^6.6.3",
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/eslint-parser": "^7.15.0",
@@ -48,8 +65,9 @@
     "@bigtest/react": "^0.1.2",
     "@folio/eslint-config-stripes": "^6.0.0",
     "@folio/stripes-cli": "^2.4.0",
-    "@folio/stripes-components": "^11.0.0",
+    "@folio/stripes-components": "^10.0.0",
     "@folio/stripes-connect": "^7.0.0",
+    "@folio/stripes-core": "folio-org/stripes-core#STCOR-663",
     "@folio/stripes-logger": "^1.0.0",
     "@formatjs/cli": "^4.2.2",
     "@jest/globals": "^28.0.1",
@@ -96,7 +114,7 @@
     "miragejs": "^0.1.32",
     "moment-timezone": "^0.5.14",
     "prop-types": "^15.5.10",
-    "query-string": "^7.1.2",
+    "query-string": "^5.0.0",
     "react-cookie": "^4.0.3",
     "react-final-form": "^6.3.0",
     "react-query": "^3.6.0",
@@ -115,21 +133,5 @@
     "rxjs": "^6.6.3",
     "swr": "^0.4.1",
     "use-deep-compare": "^1.1.0"
-  },
-  "peerDependencies": {
-    "@folio/stripes-components": "^11.0.0",
-    "@folio/stripes-connect": "^7.0.0",
-    "@folio/stripes-logger": "^1.0.0",
-    "moment": "^2.29.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-intl": "^5.7.0",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "redux-observable": "^1.2.0",
-    "rxjs": "^6.6.3"
-  },
-  "resolutions": {
-    "moment": "~2.24.0"
   }
 }

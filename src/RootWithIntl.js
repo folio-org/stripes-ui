@@ -10,10 +10,9 @@ import { CookiesProvider } from 'react-cookie';
 
 import { connectFor } from '@folio/stripes-connect';
 import { Callout, HotKeys } from '@folio/stripes-components';
+import { coreEvents, HandlerManager, TitleManager, StripesContext, CalloutContext, AppCtxMenuProvider } from '@folio/stripes-core';
 
 import ModuleRoutes from './moduleRoutes';
-import events from './events';
-
 import {
   MainContainer,
   MainNav,
@@ -24,18 +23,13 @@ import {
   SSOLanding,
   SSORedirect,
   Settings,
-  HandlerManager,
-  TitleManager,
   Login,
   OverlayContainer,
   CreateResetPassword,
   CheckEmailStatusPage,
   ForgotPasswordCtrl,
   ForgotUserNameCtrl,
-  AppCtxMenuProvider,
 } from './components';
-import { StripesContext } from './StripesContext';
-import { CalloutContext } from './CalloutContext';
 
 class RootWithIntl extends React.Component {
   static propTypes = {
@@ -89,7 +83,7 @@ class RootWithIntl extends React.Component {
                           <AppCtxMenuProvider>
                             <MainNav stripes={stripes} />
                             <HandlerManager
-                              event={events.LOGIN}
+                              event={coreEvents.LOGIN}
                               stripes={stripes}
                             />
                             { (stripes.okapi !== 'object' || stripes.discovery.isFinished) && (

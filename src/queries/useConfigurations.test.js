@@ -4,12 +4,15 @@ import {
 } from 'react-query';
 import { renderHook } from '@testing-library/react-hooks';
 
-import useConfigurations, { configurationsApi } from './useConfigurations';
-import { useStripes } from '../StripesContext';
-import useOkapiKy from '../useOkapiKy';
+import { useStripes, useOkapiKy } from '@folio/stripes-core';
 
-jest.mock('../useOkapiKy');
-jest.mock('../StripesContext');
+import useConfigurations, { configurationsApi } from './useConfigurations';
+
+jest.mock('@folio/stripes-core', () => ({
+  ...jest.requireActual('@folio/stripes-core'),
+  useOkapiKy: jest.fn(),
+  useStripes: jest.fn(),
+}));
 
 // set query retries to false. otherwise, react-query will thoughtfully
 // (but unhelpfully, in the context of testing) retry a failed query
@@ -115,4 +118,3 @@ describe('Given useConfigurations', () => {
     });
   });
 });
-

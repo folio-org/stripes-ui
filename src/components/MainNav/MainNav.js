@@ -9,9 +9,8 @@ import localforage from 'localforage';
 import { branding } from 'stripes-config';
 
 import { Icon } from '@folio/stripes-components';
+import { withModules, LastVisitedContext } from '@folio/stripes-core';
 
-import { withModules } from '../Modules';
-import { LastVisitedContext } from '../LastVisited';
 import { clearOkapiToken, clearCurrentUser } from '../../okapiActions';
 import { resetStore } from '../../mainActions';
 import { getLocale } from '../../loginServices';
@@ -176,7 +175,7 @@ class MainNav extends Component {
 
     if (stripes.hasPerm('settings.enabled')) {
       apps.push({
-        displayName: formatMessage({ id: 'stripes-core.settings' }),
+        displayName: formatMessage({ id: 'stripes-ui.settings' }),
         id: 'clickable-settings',
         href: lastVisited.x_settings || '/settings',
         active: pathname.startsWith('/settings'),
@@ -209,7 +208,7 @@ class MainNav extends Component {
                 <SkipLink />
                 <CurrentAppGroup selectedApp={selectedApp} config={stripes.config} />
               </div>
-              <nav aria-label={intl.formatMessage({ id: 'stripes-core.mainnav.topLevelLabel' })} className={css.endSection}>
+              <nav aria-label={intl.formatMessage({ id: 'stripes-ui.mainnav.topLevelLabel' })} className={css.endSection}>
                 <AppList
                   apps={apps}
                   selectedApp={selectedApp}

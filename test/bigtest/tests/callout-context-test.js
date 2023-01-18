@@ -3,10 +3,9 @@ import React, { Component, useContext } from 'react';
 import { describe, beforeEach, it } from '@bigtest/mocha';
 import { expect } from 'chai';
 
-
+import { CalloutContext } from '@folio/stripes-core';
 import CalloutInteractor from '@folio/stripes-components/lib/Callout/tests/interactor';
 
-import { CalloutContext } from '../../../src/CalloutContext';
 import setupApplication from '../helpers/setup-core-application';
 import AppInteractor from '../interactors/app';
 

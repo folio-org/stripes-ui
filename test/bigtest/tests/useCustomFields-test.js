@@ -2,8 +2,9 @@ import React from 'react';
 import { afterEach, beforeEach, describe, it } from '@bigtest/mocha';
 import { expect } from 'chai';
 
+import { useCustomFields } from '@folio/stripes-core';
+
 import setupApplication from '../helpers/setup-core-application';
-import useCustomFields from '../../../src/useCustomFields';
 
 import LoginInteractor from '../interactors/login';
 import UseCustomFieldsInteractor from '../interactors/useCustomFields';

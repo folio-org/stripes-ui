@@ -4,7 +4,7 @@ import { Router } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import componentsTranslations from '@folio/stripes-components/translations/stripes-components/en';
-import stripesCoreTranslations from '../../../translations/stripes-core/en';
+import stripesCoreTranslations from '../../../translations/stripes-ui/en';
 
 const prefixKeys = (translations, prefix) => {
   return Object
@@ -19,7 +19,7 @@ const prefixKeys = (translations, prefix) => {
 
 const translations = {
   ...prefixKeys(componentsTranslations, 'stripes-components'),
-  ...prefixKeys(stripesCoreTranslations, 'stripes-core'),
+  ...prefixKeys(stripesCoreTranslations, 'stripes-ui'),
 };
 
 const history = createMemoryHistory();

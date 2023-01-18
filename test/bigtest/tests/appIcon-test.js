@@ -6,12 +6,13 @@ import React from 'react';
 import { beforeEach, it, describe } from '@bigtest/mocha';
 import { expect } from 'chai';
 
-import { mount } from '../../../../test/bigtest/helpers/render-helpers';
+import { AppIcon } from '@folio/stripes-core';
 
-import AppIcon from '../AppIcon';
-import AppIconInteractor from './interactor';
-import png from './users-app-icon.png';
-import svg from './users-app-icon.svg';
+import { mount } from '../helpers/render-helpers';
+
+import AppIconInteractor from '../interactors/AppIcon';
+import png from '../assets/users-app-icon.png';
+import svg from '../assets/users-app-icon.svg';
 
 describe('AppIcon', async () => {
   const appIcon = new AppIconInteractor();
@@ -43,7 +44,7 @@ describe('AppIcon', async () => {
     }
   };
 
-  describe('Rendering an AppIcon using Stripes-context', () => {
+  describe.only('Rendering an AppIcon using Stripes-context', () => {
     beforeEach(async () => {
       await mount(
         <AppIcon

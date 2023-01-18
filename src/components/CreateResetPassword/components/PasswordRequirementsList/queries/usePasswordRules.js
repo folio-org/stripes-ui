@@ -2,7 +2,7 @@ import ky from 'ky';
 import { useQuery } from 'react-query';
 import queryString from 'query-string';
 
-import { useStripes } from '../../../../../StripesContext';
+import { useStripes } from '@folio/stripes-core';
 
 const usePasswordRules = (rulesLimit) => {
   const { locale = 'en', tenant, url } = useStripes().okapi;

@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect as reduxConnect } from 'react-redux';
 
+import { stripesShape } from '@folio/stripes-core';
+
 import processBadResponse from '../../processBadResponse';
-import { stripesShape } from '../../Stripes';
 import { setAuthError } from '../../okapiActions';
 import { defaultErrors } from '../../constants';
 

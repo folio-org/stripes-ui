@@ -3,7 +3,7 @@ import { expect } from 'chai';
 
 import setupApplication from '../helpers/setup-core-application';
 import LoginInteractor from '../interactors/login';
-import translations from '../../../translations/stripes-core/en';
+import translations from '../../../translations/stripes-ui/en';
 
 describe('Session timeout test', () => {
   const login = new LoginInteractor('form[class^="form--"]');

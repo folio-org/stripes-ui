@@ -7,8 +7,8 @@ import PropTypes from 'prop-types';
 import sortBy from 'lodash/sortBy';
 
 import { NavListItem, NavListSection } from '@folio/stripes-components';
+import { AppIcon } from '@folio/stripes-core';
 
-import AppIcon from '../../../../AppIcon';
 import css from '../../AppList.css';
 
 const AppListDropdown = ({ toggleDropdown, apps, listRef, selectedApp }) => (

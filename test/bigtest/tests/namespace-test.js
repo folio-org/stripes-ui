@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { describe, beforeEach, it } from '@bigtest/mocha';
 import { expect } from 'chai';
 
+import { useNamespace, withNamespace, Pluggable } from '@folio/stripes-core';
+
 import setupApplication from '../helpers/setup-core-application';
 import AppInteractor from '../interactors/app';
 
-import { useNamespace, withNamespace } from '../../../src/components';
-import Pluggable from '../../../src/Pluggable';
 import NamespaceInteractor from '../interactors/Namespace';
 
 const PrintNamespace = ({ options }) => {

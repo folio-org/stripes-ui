@@ -21,7 +21,7 @@ const CheckEmailStatusPage = (props) => {
   } = props;
 
   const isEmail = validateEmail(userEmail);
-  const labelNamespace = 'stripes-core.label';
+  const labelNamespace = 'stripes-ui.label';
   const notificationText = isEmail
     ? `${labelNamespace}.sent.email`
     : `${labelNamespace}.your.email`;

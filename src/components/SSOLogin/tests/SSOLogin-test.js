@@ -6,7 +6,7 @@ import ButtonInteractor from '@folio/stripes-components/lib/Button/tests/interac
 import Harness from '../../../../test/bigtest/helpers/Harness';
 import { mount } from '../../../../test/bigtest/helpers/render-helpers';
 import SSOLogin from '..';
-import translations from '../../../../translations/stripes-core/en';
+import translations from '../../../../translations/stripes-ui/en';
 
 // These are SSO component-based tests. There are also route-based tests
 // at /test/bigtest/tests/sso-login-test.js.

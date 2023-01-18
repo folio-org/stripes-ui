@@ -17,11 +17,11 @@ import {
   PasswordStrength,
   Headline,
 } from '@folio/stripes-components';
+import { stripesShape } from '@folio/stripes-core';
 
 import PasswordRequirementsList from './components/PasswordRequirementsList';
 
 import { setAuthError } from '../../okapiActions';
-import { stripesShape } from '../../Stripes';
 
 import OrganizationLogo from '../OrganizationLogo';
 import AuthErrorsContainer from '../AuthErrorsContainer';
@@ -50,11 +50,11 @@ class CreateResetPassword extends Component {
       passwordMasked: true,
     };
     this.translationNamespaces = {
-      module: 'stripes-core',
+      module: 'stripes-ui',
       smartComponents: 'stripes-smart-components',
-      page: 'stripes-core.createResetPassword',
-      errors: 'stripes-core.errors',
-      button: 'stripes-core.button',
+      page: 'stripes-ui.createResetPassword',
+      errors: 'stripes-ui.errors',
+      button: 'stripes-ui.button',
     };
     this.passwordMatchErrorCode = 'password.match.error';
     this.validators = {

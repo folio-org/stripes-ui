@@ -3,11 +3,11 @@ import React from 'react';
 import { describe, beforeEach, it } from '@bigtest/mocha';
 import { expect } from 'chai';
 
+import { useModuleHierarchy, Pluggable } from '@folio/stripes-core';
+
 import setupApplication from '../helpers/setup-core-application';
 import AppInteractor from '../interactors/app';
 
-import { useModuleHierarchy } from '../../../src/components';
-import Pluggable from '../../../src/Pluggable';
 import ModuleHierarchyInteractor from '../interactors/ModuleHierarchy';
 
 const PrintModuleHierarchy = () => {

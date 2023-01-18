@@ -44,7 +44,7 @@ const PasswordRequirementsList = ({ passwordValue }) => {
           // ...and use that rule requirement in a translation string
           // which is assigned to the description field of the rule
           rule.description = intl.formatMessage(
-            { id: 'stripes-core.createResetPassword.ruleTemplate' },
+            { id: 'stripes-ui.createResetPassword.ruleTemplate' },
             { description: splittedRuleDescription[1] },
           );
 

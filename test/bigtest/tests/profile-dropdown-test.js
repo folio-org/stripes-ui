@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import React, { Component } from 'react';
 import DropdownInteractor from '@folio/stripes-components/lib/Dropdown/tests/interactor';
 
-import setupApplication from '../helpers/setup-application';
+import setupApplication from '../helpers/setup-core-application';
 
 class DummyApp extends Component {
   render() {
@@ -27,11 +27,11 @@ describe('Profile dropdown', () => {
       userDropdown: [
         {
           route: '/dummy',
-          caption: 'stripes-core.label.okay'
+          caption: 'stripes-ui.label.okay'
         },
         {
           route: '/settings/myprofile/password',
-          caption: 'stripes-core.title.changePassword'
+          caption: 'stripes-ui.title.changePassword'
         },
       ]
     }

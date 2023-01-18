@@ -16,13 +16,11 @@ import {
   NavListItem,
   NavListSection,
 } from '@folio/stripes-components';
+import { withModules, IntlConsumer, getEventHandler } from '@folio/stripes-core';
 
 import NavButton from '../NavButton';
 import css from './ProfileDropdown.css';
-import { withModules } from '../../Modules';
-import { getEventHandler } from '../../../handlerService';
 import validations from '../../../userDropdownLinksService';
-import IntlConsumer from '../../IntlConsumer';
 
 class ProfileDropdown extends Component {
   static propTypes = {
@@ -145,7 +143,8 @@ class ProfileDropdown extends Component {
         alt={user.name}
         ariaLabel={user.name}
         className={css.avatar}
-      />);
+      />
+    );
   }
 
   navigateByUrl(link) {
@@ -161,7 +160,7 @@ class ProfileDropdown extends Component {
     const { stripes, onLogout } = this.props;
     const user = this.getUserData();
     const currentPerms = stripes.user ? stripes.user.perms : undefined;
-    const messageId = stripes.okapi.ssoEnabled ? 'stripes-core.logoutKeepSso' : 'stripes-core.logout';
+    const messageId = stripes.okapi.ssoEnabled ? 'stripes-ui.logoutKeepSso' : 'stripes-ui.logout';
 
     /**
      * Show perms, locale etc.
@@ -174,8 +173,8 @@ class ProfileDropdown extends Component {
           {
             intl => {
               const items = [
-                `${intl.formatMessage({ id: 'stripes-core.mainnav.profileDropdown.locale' })}: ${intl.locale}`,
-                `${intl.formatMessage({ id: 'stripes-core.mainnav.profileDropdown.permissions' })}: ${Object.keys(currentPerms || {}).sort().join(', ')}`,
+                `${intl.formatMessage({ id: 'stripes-ui.mainnav.profileDropdown.locale' })}: ${intl.locale}`,
+                `${intl.formatMessage({ id: 'stripes-ui.mainnav.profileDropdown.permissions' })}: ${Object.keys(currentPerms || {}).sort().join(', ')}`,
               ];
 
               return (
@@ -197,12 +196,12 @@ class ProfileDropdown extends Component {
     return (
       <div>
         <div className={css.header}>
-          <FormattedMessage id="stripes-core.loggedInAs" values={{ firstName: user.firstName, lastName: user.lastName }} />
+          <FormattedMessage id="stripes-ui.loggedInAs" values={{ firstName: user.firstName, lastName: user.lastName }} />
           <br />
           {
             user.curServicePoint ?
-              <FormattedMessage id="stripes-core.currentServicePoint" values={{ name: user.curServicePoint.name }} /> :
-              <FormattedMessage id="stripes-core.currentServicePointNotSelected" />
+              <FormattedMessage id="stripes-ui.currentServicePoint" values={{ name: user.curServicePoint.name }} /> :
+              <FormattedMessage id="stripes-ui.currentServicePointNotSelected" />
           }
         </div>
         <hr className={css.divider} />
@@ -212,7 +211,7 @@ class ProfileDropdown extends Component {
               (!stripes.config || !stripes.config.showHomeLink) ?
                 null :
                 <NavListItem id="clickable-home" type="button" onClick={this.onHome}>
-                  <FormattedMessage id="stripes-core.front.home" />
+                  <FormattedMessage id="stripes-ui.front.home" />
                 </NavListItem>
             }
             {this.userLinks}
@@ -232,7 +231,7 @@ class ProfileDropdown extends Component {
 
     return (
       <NavButton
-        ariaLabel={intl.formatMessage({ id: 'stripes-core.mainnav.myProfileAriaLabel' })}
+        ariaLabel={intl.formatMessage({ id: 'stripes-ui.mainnav.myProfileAriaLabel' })}
         selected={open}
         className={css.button}
         icon={this.getProfileImage()}

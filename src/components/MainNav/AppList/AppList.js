@@ -130,7 +130,7 @@ class AppList extends Component {
     );
     const label = (
       <Icon iconPosition="end" icon={open ? 'caret-up' : 'caret-down'}>
-        <FormattedMessage id="stripes-core.mainnav.showAllApplicationsButtonLabel" />
+        <FormattedMessage id="stripes-ui.mainnav.showAllApplicationsButtonLabel" />
       </Icon>
     );
 
@@ -138,7 +138,7 @@ class AppList extends Component {
       <NavButton
         data-test-app-list-apps-toggle
         label={label}
-        aria-label={formatMessage({ id: 'stripes-core.mainnav.showAllApplicationsButtonAriaLabel' })}
+        aria-label={formatMessage({ id: 'stripes-ui.mainnav.showAllApplicationsButtonAriaLabel' })}
         className={css.navMobileToggle}
         labelClassName={css.dropdownToggleLabel}
         onClick={this.toggleDropdown}

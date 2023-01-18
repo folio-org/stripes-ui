@@ -12,10 +12,11 @@ import {
   List,
   Loading
 } from '@folio/stripes-components';
+import { withModules } from '@folio/stripes-core';
+
 import AboutEnabledModules from './AboutEnabledModules';
 import AboutInstallMessages from './AboutInstallMessages';
 import WarningBanner from './WarningBanner';
-import { withModules } from '../Modules';
 import stripesCore from '../../../package';
 import css from './About.css';
 
@@ -39,7 +40,7 @@ const About = (props) => {
 
     const okapiInterfaces = m.okapiInterfaces;
     if (!okapiInterfaces) {
-      return <FormattedMessage id="stripes-core.about.noDependencies" values={{ base }} />;
+      return <FormattedMessage id="stripes-ui.about.noDependencies" values={{ base }} />;
     }
 
     const itemFormatter = (key) => {
@@ -57,7 +58,7 @@ const About = (props) => {
     return (
       <span>
         <Headline size="small" faded>
-          <FormattedMessage id="stripes-core.about.moduleDependsOn" values={{ module: `${m.module} ${m.version || ''}` }} />
+          <FormattedMessage id="stripes-ui.about.moduleDependsOn" values={{ module: `${m.module} ${m.version || ''}` }} />
         </Headline>
         <List
           items={Object.keys(okapiInterfaces).sort()}
@@ -73,16 +74,16 @@ const About = (props) => {
     let headlineMsg;
     switch (caption) {
       case 'app':
-        headlineMsg = <FormattedMessage id="stripes-core.about.appModuleCount" values={{ count: list.length }} />;
+        headlineMsg = <FormattedMessage id="stripes-ui.about.appModuleCount" values={{ count: list.length }} />;
         break;
       case 'settings':
-        headlineMsg = <FormattedMessage id="stripes-core.about.settingsModuleCount" values={{ count: list.length }} />;
+        headlineMsg = <FormattedMessage id="stripes-ui.about.settingsModuleCount" values={{ count: list.length }} />;
         break;
       case 'plugin':
-        headlineMsg = <FormattedMessage id="stripes-core.about.pluginModuleCount" values={{ count: list.length }} />;
+        headlineMsg = <FormattedMessage id="stripes-ui.about.pluginModuleCount" values={{ count: list.length }} />;
         break;
       default:
-        headlineMsg = <FormattedMessage id="stripes-core.about.moduleTypeCount" values={{ count: list.length, type: caption }} />;
+        headlineMsg = <FormattedMessage id="stripes-ui.about.moduleTypeCount" values={{ count: list.length, type: caption }} />;
     }
 
     list.sort();
@@ -107,14 +108,14 @@ const About = (props) => {
   const nm = Object.keys(modules).length;
   const ni = Object.keys(interfaces).length;
   const ConnectedAboutEnabledModules = props.stripes.connect(AboutEnabledModules);
-  const unknownMsg = <FormattedMessage id="stripes-core.about.unknown" />;
-  const numModulesMsg = <FormattedMessage id="stripes-core.about.moduleCount" values={{ count: nm }} />;
-  const numInterfacesMsg = <FormattedMessage id="stripes-core.about.interfaceCount" values={{ count: ni }} />;
+  const unknownMsg = <FormattedMessage id="stripes-ui.about.unknown" />;
+  const numModulesMsg = <FormattedMessage id="stripes-ui.about.moduleCount" values={{ count: nm }} />;
+  const numInterfacesMsg = <FormattedMessage id="stripes-ui.about.interfaceCount" values={{ count: ni }} />;
 
   return (
     <Pane
       defaultWidth="fill"
-      paneTitle={<FormattedMessage id="stripes-core.about.paneTitle" />}
+      paneTitle={<FormattedMessage id="stripes-ui.about.paneTitle" />}
       paneTitleRef={titleRef}
     >
       {!isLoadingFinished ? (
@@ -130,10 +131,10 @@ const About = (props) => {
       <div className={css.versionsContainer}>
         <div className={css.versionsColumn}>
           <Headline size="large">
-            <FormattedMessage id="stripes-core.about.userInterface" />
+            <FormattedMessage id="stripes-ui.about.userInterface" />
           </Headline>
           <Headline>
-            <FormattedMessage id="stripes-core.about.foundation" />
+            <FormattedMessage id="stripes-ui.about.foundation" />
           </Headline>
           <span
             id="platform-versions"
@@ -172,26 +173,26 @@ const About = (props) => {
         </div>
         <div className={css.versionsColumn}>
           <Headline size="large">
-            <FormattedMessage id="stripes-core.about.okapiServices" />
+            <FormattedMessage id="stripes-ui.about.okapiServices" />
           </Headline>
           <Headline>Okapi</Headline>
           <List
             listStyle="bullets"
             itemFormatter={(item, i) => (<li key={i}>{item}</li>)}
             items={[
-              <FormattedMessage id="stripes-core.about.version" values={{ version: _.get(props.stripes, ['discovery', 'okapi']) || unknownMsg }} />,
-              <FormattedMessage id="stripes-core.about.forTenant" values={{ tenant: _.get(props.stripes, ['okapi', 'tenant']) || unknownMsg }} />,
-              <FormattedMessage id="stripes-core.about.onUrl" values={{ url: _.get(props.stripes, ['okapi', 'url']) || unknownMsg }} />
+              <FormattedMessage id="stripes-ui.about.version" values={{ version: _.get(props.stripes, ['discovery', 'okapi']) || unknownMsg }} />,
+              <FormattedMessage id="stripes-ui.about.forTenant" values={{ tenant: _.get(props.stripes, ['okapi', 'tenant']) || unknownMsg }} />,
+              <FormattedMessage id="stripes-ui.about.onUrl" values={{ url: _.get(props.stripes, ['okapi', 'url']) || unknownMsg }} />
             ]}
           />
           <br />
           <Headline>{numModulesMsg}</Headline>
           <ConnectedAboutEnabledModules tenantid={_.get(props.stripes, ['okapi', 'tenant']) || unknownMsg} availableModules={modules} />
           <Headline size="small">
-            <FormattedMessage id="stripes-core.about.legendKey" />
+            <FormattedMessage id="stripes-ui.about.legendKey" />
           </Headline>
           <FormattedMessage
-            id="stripes-core.about.notEnabledModules"
+            id="stripes-ui.about.notEnabledModules"
             tagName="p"
             values={{
               span: chunks => <span className={css.isEmptyMessage}>{chunks}</span>
@@ -211,10 +212,10 @@ const About = (props) => {
         </div>
         <div className={css.versionsColumn}>
           <Headline size="large">
-            <FormattedMessage id="stripes-core.about.uiOrServiceDependencies" />
+            <FormattedMessage id="stripes-ui.about.uiOrServiceDependencies" />
           </Headline>
           <Headline>
-            <FormattedMessage id="stripes-core.about.foundation" />
+            <FormattedMessage id="stripes-ui.about.foundation" />
           </Headline>
           {renderDependencies(Object.assign({}, stripesCore.stripes || {}, { module: 'stripes-core' }), interfaces)}
           <br />

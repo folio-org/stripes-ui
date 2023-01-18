@@ -9,8 +9,8 @@ import {
   List,
   MessageBanner,
 } from '@folio/stripes-components';
+import { isVersionCompatible } from '@folio/stripes-core';
 
-import { isVersionCompatible } from '../../discoverServices';
 import css from './About.css';
 
 const WarningBanner = ({
@@ -40,8 +40,8 @@ const WarningBanner = ({
 
   const missingModulesCount = missingModules.length;
   const incompatibleModulesCount = incompatibleModules.length;
-  const missingModulesMsg = <FormattedMessage id="stripes-core.about.missingModuleCount" values={{ count: missingModulesCount }} />;
-  const incompatibleModuleMsg = <FormattedMessage id="stripes-core.about.incompatibleModuleCount" values={{ count: incompatibleModulesCount }} />;
+  const missingModulesMsg = <FormattedMessage id="stripes-ui.about.missingModuleCount" values={{ count: missingModulesCount }} />;
+  const incompatibleModuleMsg = <FormattedMessage id="stripes-ui.about.incompatibleModuleCount" values={{ count: incompatibleModulesCount }} />;
 
   return (
     <div className={css.warningContainer}>

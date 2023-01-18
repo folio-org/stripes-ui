@@ -1,7 +1,6 @@
 import { useQuery } from 'react-query';
 
-import useOkapiKy from '../useOkapiKy';
-import { useStripes } from '../StripesContext';
+import { useOkapiKy, useStripes } from '@folio/stripes-core';
 
 const OKAPI_ENV_API = '_/env';
 

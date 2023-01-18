@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
+
 import { Dropdown, DropdownMenu } from '@folio/stripes-components';
+import { withAppCtxMenu } from '@folio/stripes-core';
+
 import CurrentAppButton from './CurrentAppButton';
-import { withAppCtxMenu } from './AppCtxMenuContext';
+
 
 class AppContextDropdown extends React.Component {
   static propTypes = {
@@ -31,7 +34,7 @@ class AppContextDropdown extends React.Component {
           <>
             {selectedApp?.displayName}
             <span className="sr-only">
-              <FormattedMessage id="stripes-core.mainnav.appContextMenu" />
+              <FormattedMessage id="stripes-ui.mainnav.appContextMenu" />
             </span>
           </>
         }

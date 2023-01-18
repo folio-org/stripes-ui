@@ -2,10 +2,9 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import { Headline } from '@folio/stripes-components';
+import { Pluggable, useStripes } from '@folio/stripes-core';
 
 import AddContext from '../../AddContext';
-import Pluggable from '../../Pluggable';
-import { useStripes } from '../../StripesContext';
 
 import css from './BadRequestScreen.css';
 
@@ -22,7 +21,7 @@ const BadRequestScreen = () => {
             margin="none"
             className={css.title}
           >
-            <FormattedMessage id="stripes-core.front.error.header" />
+            <FormattedMessage id="stripes-ui.front.error.header" />
           </Headline>
           <Headline
             faded
@@ -31,7 +30,7 @@ const BadRequestScreen = () => {
             className={css.title}
           >
             <FormattedMessage
-              id="stripes-core.front.error.general.message"
+              id="stripes-ui.front.error.general.message"
               values={{
                 url: window.location.href,
                 br: <br />,

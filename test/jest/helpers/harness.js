@@ -5,7 +5,7 @@ import {
   QueryClientProvider,
 } from 'react-query';
 
-import { StripesContext } from '../../../src/StripesContext';
+import { StripesContext } from '@folio/stripes-core';
 
 import IntlProvider from './intl';
 // import buildStripes from '../__mock__/stripesCore.mock';

@@ -2,15 +2,15 @@ import { get } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Headline } from '@folio/stripes-components';
-import { FormattedMessage } from 'react-intl';
+import { Pluggable } from '@folio/stripes-core';
 
-import Pluggable from '../Pluggable';
+import { FormattedMessage } from 'react-intl';
 
 import css from './Front.css';
 import AddContext from '../AddContext';
 
 const Front = ({ stripes }) => {
-  const tag = get(stripes, 'config.welcomeMessage') || 'stripes-core.front.welcome';
+  const tag = get(stripes, 'config.welcomeMessage') || 'stripes-ui.front.welcome';
 
   return (
     <AddContext context={{ stripes }}>

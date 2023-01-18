@@ -9,7 +9,7 @@ import {
 import setupApplication from '../helpers/setup-core-application';
 import LoginInteractor from '../interactors/login';
 
-import translations from '../../../translations/stripes-core/en';
+import translations from '../../../translations/stripes-ui/en';
 
 describe('Login', () => {
   const login = new LoginInteractor('form[class^="form--"]');

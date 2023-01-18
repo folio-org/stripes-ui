@@ -49,7 +49,7 @@ class ForgotPasswordForm extends Component {
                   tag="h1"
                   data-test-h1
                 >
-                  <FormattedMessage id="stripes-core.label.forgotPassword" />
+                  <FormattedMessage id="stripes-ui.label.forgotPassword" />
                 </Headline>
                 <Headline
                   size="large"
@@ -58,7 +58,7 @@ class ForgotPasswordForm extends Component {
                   faded
                   data-test-p
                 >
-                  <FormattedMessage id="stripes-core.label.forgotPasswordCallToAction" />
+                  <FormattedMessage id="stripes-ui.label.forgotPasswordCallToAction" />
                 </Headline>
                 <div className={formStyles.formGroup}>
                   <Field
@@ -87,7 +87,7 @@ class ForgotPasswordForm extends Component {
                   marginBottom0
                   data-test-submit
                 >
-                  <FormattedMessage id="stripes-core.button.continue" />
+                  <FormattedMessage id="stripes-ui.button.continue" />
                 </Button>
                 <Row center="xs">
                   <Col xs={12}>

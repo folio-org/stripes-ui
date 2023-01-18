@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { LoadingView } from '@folio/stripes-components';
 
-import { ModulesContext } from './ModulesContext';
+import { ModulesContext } from '@folio/stripes-core';
 
 import { packageName } from './constants';
 import {

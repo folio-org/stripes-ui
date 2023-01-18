@@ -3,15 +3,11 @@ import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { connectFor } from '@folio/stripes-connect';
+import { StripesContext, TitleManager, ModuleHierarchyProvider, coreEvents, getEventHandlers } from '@folio/stripes-core';
 
-import { StripesContext } from './StripesContext';
 import AddContext from './AddContext';
-import TitleManager from './components/TitleManager';
 import RouteErrorBoundary from './components/RouteErrorBoundary';
-import { getEventHandlers } from './handlerService';
 import { packageName } from './constants';
-import { ModuleHierarchyProvider } from './components';
-import events from './events';
 
 // Process and cache "app" type modules and render the routes
 const AppRoutes = ({ modules, stripes }) => {
@@ -55,7 +51,7 @@ const AppRoutes = ({ modules, stripes }) => {
         const data = { displayName, name };
 
         // allow SELECT_MODULE handlers to intervene
-        const components = getEventHandlers(events.SELECT_MODULE, moduleStripes, modules.handler, data);
+        const components = getEventHandlers(coreEvents.SELECT_MODULE, moduleStripes, modules.handler, data);
         if (components.length) {
           return components.map(HandlerComponent => (<HandlerComponent stripes={stripes} data={data} />));
         }

@@ -2,10 +2,9 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import { Headline } from '@folio/stripes-components';
+import { Pluggable, useStripes } from '@folio/stripes-core';
 
 import AddContext from '../../AddContext';
-import Pluggable from '../../Pluggable';
-import { useStripes } from '../../StripesContext';
 
 import css from './NoPermissionScreen.css';
 
@@ -21,7 +20,7 @@ const NoPermissionScreen = () => {
             tag="h2"
             className={css.title}
           >
-            <FormattedMessage id="stripes-core.front.error.noPermission" />
+            <FormattedMessage id="stripes-ui.front.error.noPermission" />
           </Headline>
         </div>
       </Pluggable>
