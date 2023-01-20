@@ -21,9 +21,8 @@
     "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/stripes-ui ./translations/stripes-ui/compiled"
   },
   "peerDependencies": {
-    "@folio/stripes-core": "^8.2.0"
+    "@folio/stripes-core": "^9.0.0"
   },
-
   "devDependencies": {
     "@formatjs/cli": "^4.2.2",
     "jest": "^28.0.1",
