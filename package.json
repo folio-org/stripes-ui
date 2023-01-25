@@ -40,7 +40,7 @@
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json"
   },
   "peerDependencies": {
-    "@folio/stripes-core": "^8.2.0",
+    @folio/stripes-core": "folio-org/stripes-core#STCOR-663",
     "@folio/stripes-components": "^10.0.0",
     "@folio/stripes-connect": "^7.0.0",
     "@folio/stripes-logger": "^1.0.0",

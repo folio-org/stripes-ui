@@ -4,3 +4,4 @@
 
 * Initial setup
 * PasswordValidationField swallows error messages from API queries. Fixes STCOR-657.
+* Update `stripes-core` to `v9`.
