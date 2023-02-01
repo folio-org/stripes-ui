@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The main UI wrapper responsible for setting the global layout, navigation menu and top bar",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-ui",
@@ -21,7 +21,7 @@
     "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/stripes-ui ./translations/stripes-ui/compiled"
   },
   "peerDependencies": {
-    "@folio/stripes-core": "^9.0.0"
+    "@folio/stripes-core": "^9.1.0"
   },
   "devDependencies": {
     "@formatjs/cli": "^4.2.2",
