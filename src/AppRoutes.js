@@ -41,9 +41,9 @@ const AppRoutes = ({ modules, stripes }) => {
         connect,
       };
     }).filter(x => x);
-  }, [modules.app]);
+  }, [modules.app, stripes]);
 
-  return cachedModules.map(({ ModuleComponent, connect, module, name, moduleStripes, stripes, displayName }) => (
+  return cachedModules.map(({ ModuleComponent, connect, module, name, moduleStripes, stripes: propsStripes, displayName }) => (
     <Route
       path={module.route}
       key={module.route}
@@ -51,9 +51,9 @@ const AppRoutes = ({ modules, stripes }) => {
         const data = { displayName, name };
 
         // allow SELECT_MODULE handlers to intervene
-        const components = getEventHandlers(coreEvents.SELECT_MODULE, moduleStripes, modules.handler, data);
-        if (components.length) {
-          return components.map(HandlerComponent => (<HandlerComponent stripes={stripes} data={data} />));
+        const handlerComponents = getEventHandlers(coreEvents.SELECT_MODULE, moduleStripes, modules.handler, data);
+        if (handlerComponents.length) {
+          return handlerComponents.map(Handler => (<Handler stripes={propsStripes} data={data} />));
         }
 
         return (
