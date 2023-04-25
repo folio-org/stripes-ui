@@ -1,3 +1,1 @@
-import { init } from '@folio/stripes-core';
-
-init();
+import('@folio/stripes-core/bootstrap');
