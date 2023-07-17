@@ -1,6 +1,6 @@
 {
   "name": "@folio/stripes-ui",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "The main UI wrapper responsible for setting the global layout, navigation menu and top bar",
   "license": "Apache-2.0",
   "repository": "folio-org/stripes-ui",
