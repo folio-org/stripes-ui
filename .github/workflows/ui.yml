@@ -10,4 +10,4 @@ jobs:
     secrets: inherit
     with:
       jest-enabled: false
-      sonar-sources: ./src
+      sonar-enabled: false
