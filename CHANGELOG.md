@@ -1,6 +1,6 @@
 # Change history for stripes-ui
 
-## 2.1.0 IN PROGRESS
+## 3.0.0 IN PROGRESS
 
 ## [2.0.0](https://github.com/folio-org/stripes-ui/tree/v2.0.0) (2023-10-11)
 
