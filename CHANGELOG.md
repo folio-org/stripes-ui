@@ -1,6 +1,6 @@
 # Change history for stripes-ui
 
-## 3.0.0 IN PROGRESS
+## [3.0.0](https://github.com/folio-org/stripes-ui/tree/v3.0.0) (2025-02-24)
 
 * *BREAKING* Upgrade `@folio/stripes-*` dependencies. Refs STRIPESUI-14.
 
